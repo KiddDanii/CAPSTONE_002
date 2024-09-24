@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CA5F267E-ABF7-F80F-D305-982DA1E35537" name="SOLICITUD_CITA">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:08:03 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_cita" id="7C6D24A6-EC28-76EC-8679-D7D4E3A323C8">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:41:13 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1000</dataTypePrecision>
+<ownDataTypeParameters>,1000,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_soli" id="D9A4FABE-E1D9-E8C4-8443-E99AF35AEDA8">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:41:29 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tratamiento" id="2899CEFA-7781-2340-5651-CEB97A62799A">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:41:49 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre_Estudiante" id="364B8FA7-725B-729F-B1FA-B77E058DE3C1">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:46:25 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rut_Paciente" id="ABE2FF95-4DFD-A80B-C2DC-EDF2BC361425">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:50:21 UTC</createdTime>
+<generatorID>2D2099AC-BD1B-EFD0-E0A8-52974C58FE1A</generatorID>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<referedAttribute>79789B32-DEC1-93D9-10FF-CE0D99652FD5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="702255E3-CC6B-FE59-4E41-6083B95938A3" name="SOLICITUD_CITA PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:41:28 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7C6D24A6-EC28-76EC-8679-D7D4E3A323C8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

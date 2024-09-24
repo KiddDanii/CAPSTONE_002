@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4FE03F66-34D2-FE08-D440-059B8EEA5CEF" name="FICHA_CLINICA">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:07:57 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_ficha" id="35ACE798-82AF-FA69-F9AB-B55C9581D901">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:37:35 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>500</dataTypePrecision>
+<ownDataTypeParameters>,500,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Motivo_consulta" id="04A6C7A8-DA34-693A-5B95-CA8235F3BE19">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:38:32 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Historial_med." id="6AECF258-D9B4-71BF-D549-09D1536B7590">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:39:10 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha" id="DACA973C-EF99-F3B8-A5D4-45B1F0A86A0A">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:39:32 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rut_Paciente" id="B7BF22AC-2CEF-FF09-DE44-BA72DEEFE723">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:47:52 UTC</createdTime>
+<generatorID>7F0067EF-3CCA-BB02-32F5-46676B2A9916</generatorID>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<referedAttribute>79789B32-DEC1-93D9-10FF-CE0D99652FD5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="61662538-E8B8-0201-A694-EC5E0440BC80" name="FICHA_CLINICA PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-09-24 22:38:30 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>35ACE798-82AF-FA69-F9AB-B55C9581D901</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
