@@ -18,10 +18,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
+from dotenv import main # type: ignore
+import os
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-oyw23el2o19&c43q3-&wt-52jfg-(x-083tk+i6kw0qmbj0@n@'
-
+main.load_dotenv()
+SECRET_KEY = 'django-insecure-oyw23el2o19&c43q3-&wt-52jfg-(x-083tk+i6kw0qmbj0@n@' #os.environ['SECRET_KEY']
+'''
+Make sure that you've installed ??? I mean, I got it installed....
+python-dotenv.... with pip install python-dotenv
+'''
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -37,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ProyectoAPT',
 ]
 
 MIDDLEWARE = [
