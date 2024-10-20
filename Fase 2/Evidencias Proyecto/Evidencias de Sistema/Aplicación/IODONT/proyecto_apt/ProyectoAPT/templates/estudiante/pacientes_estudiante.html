@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends "base.html" %} <!-- Extendemos del BASE.html en la raiz de templates-->
+{%block content%} <!--Cargamos el bloque en la raiz para modificarlo-->
+{%load static %} <!-- Cargamos los archivos ESTATICOS para la pagina-->
+<html>
+<head>
+  <title>Mis Pacientes</title>
+  <link rel="stylesheet" href='{% static "css/pacientes_estudiante.css" %}'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Perfil</h2>
+    <a href="{% url 'infoestudiante' %}">Modificar Perfil</a>
+
+    <h2>Mis Pacientes</h2>
+    <a href="{% url 'pacientes_est' %}">Ver Pacientes</a>
+
+    <h2>Publicación</h2>
+    <a href="{% url 'publicacion_est' %}">Publicación en lodont</a>
+
+    <h2>Notificaciones</h2>
+    <a href="{% url 'notificaciones' %}">Ver Notificaciones</a>
+
+    <h2>Mi Calendario</h2>
+    <a href="{% url 'calendario' %}">Organizar horarios</a>
+  </div>
+
+
+  <div class="pacientesCss">
+    <div class="content">
+        <h1>Mis Pacientes</h1>
+
+        {% for paciente in pacientes %}
+        <div class="patient-card">
+            <div class="patient-info">
+                <h3>{{ paciente.first_name }} {{ paciente.last_name }}</h3>
+                <p>Tratamiento de {{ paciente.tratamiento }}</p>
+                <a href="{% url 'crear_ficha_paciente' user_id=paciente.id %}">
+                    <button class="button">Crear Ficha</button>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Bloque para mostrar mensajes de Django -->
+{% if messages %}
+  <div class="alert-container">
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+  
+  {% endblock %}
+</body>
+</html>

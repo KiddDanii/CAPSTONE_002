@@ -1,0 +1,10 @@
+VirtualEnvironment
+venv
+*.pyc
+.env
+Fase 2/Evidencias Proyecto/Evidencias de Sistema/Aplicación/IODONT/proyecto_apt/proyecto_apt/.env
+Fase 2/Evidencias Proyecto/Evidencias de Sistema/Aplicación/IODONT/proyecto_apt/proyecto_apt/__pycache__
+./Fase 2/Evidencias Proyecto/Evidencias de Sistema/Aplicación/IODONT/proyecto_apt/proyecto_apt/.env
+./Fase 2/Evidencias Proyecto/Evidencias de Sistema/Aplicación/IODONT/proyecto_apt/proyecto_apt/__pycache__
+./Fase 2/Evidencias Proyecto/Evidencias de Sistema/Aplicación/IODONT/proyecto_apt/proyecto_apt/.env
+./Fase 2/Evidencias Proyecto/Evidencias de Sistema/Aplicación/IODONT/proyecto_apt/proyecto_apt/__pycache__/*
