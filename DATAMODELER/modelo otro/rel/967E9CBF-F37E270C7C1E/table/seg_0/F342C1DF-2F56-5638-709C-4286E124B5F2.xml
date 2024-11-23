@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F342C1DF-2F56-5638-709C-4286E124B5F2" name="tipousuario">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>75AB7589-AAEA-80CA-D002-CF832B352805</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idusuario" id="84272E5B-3D72-846E-999A-8A275001309B">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>C03B815E-1DA4-6B11-FB07-35B8B30BCBD5</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipousuario" id="D9FB71E5-75C9-6E60-C4EB-73AA978132FE">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>6FE27CBB-3E0C-AF63-3D7F-6C6F3BD84A96</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<listOfValues>
+<valueDef value="Estudiante" description=""/>
+<valueDef value="Paciente" description=""/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estudiante_rut_estudiante" id="9F4931BE-3D9D-4605-96A2-2F9BD024ACFF">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>6245EBFC-A633-D2A2-0FD7-AEEE21EA2FB8</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0833F875-E865-800F-D4F6-12F612EA57C3" referredColumn="527A34E8-2BB1-EFEE-DF4F-54259B7F3314"/>
+</associations>
+</Column>
+<Column name="paciente_rut_paciente" id="3B99FB32-AC10-1270-05FA-7397635581AF">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>35CE61C7-C1C9-3DA3-8E98-FA0088C51AFA</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F2DEA204-5F4C-B3A5-96AE-894DFC1FF3CC" referredColumn="DA080668-5815-4F7D-9F55-5224BAAE697E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1AC1DB88-8625-D1F2-BBD3-AEC71C3093E8" name="tipousuario_pk">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>704FDB30-C6BE-9985-48CA-61A99627E82A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84272E5B-3D72-846E-999A-8A275001309B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7A92BE1F-19F5-4DFA-0F47-BD160038E589" name="tipousuario__idx">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>3F0FE931-1F79-960B-2EA5-AC4DF2421592</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F4931BE-3D9D-4605-96A2-2F9BD024ACFF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EE78CE68-BA18-25DD-9CB5-736624AE4C03" name="tipousuario__idxv1">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>2D05E4EB-B242-2AAA-B48B-A4443089132E</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B99FB32-AC10-1270-05FA-7397635581AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="94E0C14F-DCA1-83D8-A17A-BF4164218415" name="tipousuario_paciente_fk">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B99FB32-AC10-1270-05FA-7397635581AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ADF8EE7B-0344-0C14-43F3-CCD5FB1AD2FE" name="tipousuario_estudiante_fk">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F4931BE-3D9D-4605-96A2-2F9BD024ACFF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

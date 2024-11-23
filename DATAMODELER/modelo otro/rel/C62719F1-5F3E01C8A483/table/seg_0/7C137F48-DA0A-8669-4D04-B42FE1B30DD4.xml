@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7C137F48-DA0A-8669-4D04-B42FE1B30DD4" name="TRATAMIENTO">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>B616F649-0973-2A12-6D17-4D3E01B3176A</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_trata" id="6756DD40-A885-DD38-DF96-C17C6C8094A8">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>AFD83DF5-953B-EB27-3825-E020503F7F86</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo_trat." id="6A079575-09A3-70CE-96A6-15FA13557BF6">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>FD0887F5-C377-B3D1-5843-E16FE1B1BD21</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descripcion" id="D606A62E-A7EE-63EC-BB9E-2784987B99B7">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>F88FD87A-9011-82B1-1C16-21F13D39A94F</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AC6297DC-92FF-49F6-4F9A-E7C08E633D17" name="TRATAMIENTO_PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>BAB7DC1A-6A98-19D7-4994-748316C33142</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6756DD40-A885-DD38-DF96-C17C6C8094A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

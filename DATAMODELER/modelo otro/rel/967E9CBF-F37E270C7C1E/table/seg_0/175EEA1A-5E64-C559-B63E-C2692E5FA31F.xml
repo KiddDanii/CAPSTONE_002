@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="175EEA1A-5E64-C559-B63E-C2692E5FA31F" name="relation_14">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>6BECCEA5-BD4D-9308-41FC-44640FCA1E42</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="paciente_rut_paciente" id="8850200E-704B-1292-7DB1-F94C6398E239">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>3AAB1330-1923-A9C0-4797-E49CF1E9FEBF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CA9C9713-FEC3-2819-BC5D-97020F652BD1" referredColumn="DA080668-5815-4F7D-9F55-5224BAAE697E"/>
+</associations>
+</Column>
+<Column name="receta_idreceta" id="99517180-6F9A-B0D0-7BA3-A638E120ECBC">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>B0FE261B-9523-6EE6-DB5E-00A227EFBCDA</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8D481A2C-12C3-E53C-1DC5-4287C6C64649" referredColumn="E0276EAA-6E88-DB51-5645-8ACF48F7EEE1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9867ABFB-E8FF-56A2-92EC-98185BA36160" name="relation_14_pk">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>8604DB74-FB58-6A8A-B5BC-4AD8B8B62008</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8850200E-704B-1292-7DB1-F94C6398E239"/>
+<colUsage columnID="99517180-6F9A-B0D0-7BA3-A638E120ECBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="81BC81AB-2FDD-BD34-3DB2-1FE7C4461B81" name="relation_14_paciente_fk">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8850200E-704B-1292-7DB1-F94C6398E239"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="92185A94-BB47-7641-1FAB-2D64DD73FFDD" name="relation_14_receta_fk">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99517180-6F9A-B0D0-7BA3-A638E120ECBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

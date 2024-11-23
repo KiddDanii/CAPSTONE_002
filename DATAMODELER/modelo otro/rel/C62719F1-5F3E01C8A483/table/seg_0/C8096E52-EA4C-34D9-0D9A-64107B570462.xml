@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C8096E52-EA4C-34D9-0D9A-64107B570462" name="Horarios">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>65D5051E-F9E5-906D-9C69-F03BAA127932</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idHorario" id="B6D8F5FA-F7A7-68ED-0411-9A4C6D6C0502">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>463956A6-0238-A918-089E-9D3834BBDEE8</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="horaInicial" id="A3CE0B02-4A3F-A33C-B94E-19D3EF0804A7">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>9F39602B-B1D8-14A2-052F-BD52C901227F</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="60482E4B-B75F-E3BB-3792-17C7F84F8AB6">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>E77253CC-A47B-A08E-7771-5754061374FA</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="horaFinal" id="C560CCDC-7A42-FC8F-2C47-471FEAD20178">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>5AA3B629-C2FB-06AB-97BB-F307F0D10AA4</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTUDIANTE_Rut_Estudiante" id="92DC8823-5B03-8E61-BE51-054478C1575D">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>2335CE0B-12D2-027E-6FD2-D790B447D17B</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EFC6B26E-7A87-B29E-9387-288B65BA31EF" referredColumn="378EEF47-983E-BA7C-5200-041F8E9AAEAD"/>
+</associations>
+</Column>
+<Column name="Cita_idCita" id="93943E0F-D3E6-E033-01A6-4F99D9777CD2">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>BDB17192-8190-27F9-D80E-7DEA1F8FCF68</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="461F1051-FF2A-6C54-6158-3DB9EC7893CB" referredColumn="65584AE9-71AC-5B8B-9262-52809718F7DB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CF2C7692-A760-B574-164E-D32C56CAD547" name="Horarios_PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>DCE976CD-7989-82EF-5BA7-BBC00A461F38</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6D8F5FA-F7A7-68ED-0411-9A4C6D6C0502"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="430B9CD8-FD54-70E9-F219-0ADF8A35038E" name="Horarios__IDX">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>1288316E-97A5-3375-BDD6-31B8506052C5</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="93943E0F-D3E6-E033-01A6-4F99D9777CD2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="724A1697-0F61-928D-F3C5-E335D99B3D5E" name="Horarios_ESTUDIANTE_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>B55D90C8-5F21-EE8F-881D-667A2351BC58</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="92DC8823-5B03-8E61-BE51-054478C1575D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C5A9093-A47D-3C7A-A3A1-3A6B4003FD58" name="Horarios_Cita_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:56:29 UTC</createdTime>
+<generatorID>1288316E-97A5-3375-BDD6-31B8506052C5</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="93943E0F-D3E6-E033-01A6-4F99D9777CD2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

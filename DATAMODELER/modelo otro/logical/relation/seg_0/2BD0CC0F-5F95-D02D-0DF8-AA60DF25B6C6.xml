@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_15" directorySegmentName="seg_0" id="2BD0CC0F-5F95-D02D-0DF8-AA60DF25B6C6">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>2A187185-2634-DEB0-E1F8-7E426D9B1360</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<sourcePk>0104B671-5BF7-5623-E807-04DE76706450</sourcePk>
+<targetPk>6C8AE537-EE63-5B51-E927-C1A8FE67C5B3</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>48135AD1-39B7-6C9D-4F8C-FFA7473B0B1E</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>7CCB1386-982C-E1D3-0966-409703833972</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

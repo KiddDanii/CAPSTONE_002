@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C6BFD783-47ED-3501-48C1-E646AC13E79C" name="Receta">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>F67F83B1-4025-E560-8F97-4CD37BEB5DF5</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>C6CCCBDA-D07E-66FD-3BEA-1B4B11AA54C6</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idReceta" id="90883611-0BCA-95DC-4442-03E1DD1B5015">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>BC78B1E6-9DE9-B92D-D468-996FF380D112</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>EF5BA213-B941-8F10-20E9-B456D4FBD0E3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="medicamentos" id="F3501127-668D-29DB-C789-145CEA448BC0">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>353BE860-4A45-8DCB-8CA5-A9D06386B2E8</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>3CFBF9DF-3E2F-2451-01D9-64AF6A92F15A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dosis" id="21EE0280-247D-EA7D-AFEF-DF1B56DF5F84">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>B64AD5AC-3094-A838-59F5-99216B3E4EAC</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>3AFBE548-4B65-CBE0-B8EE-151ADB7D1045</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="frecuencia" id="337FFAB3-FCCA-4095-0C07-FD9D8FC4CA3E">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>90EE9977-1772-95CA-1AE7-B76E7DF509A9</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>3954088D-6AD9-777A-C006-751CC2127F28</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="955E5474-96E9-21FF-D44D-8162D2E023D2" name="Receta_PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>ED08AA5C-2C26-EECE-ECC3-41D93D33716D</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>5FDB6429-B4B0-A309-91D1-F2B247C5515D</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="90883611-0BCA-95DC-4442-03E1DD1B5015"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

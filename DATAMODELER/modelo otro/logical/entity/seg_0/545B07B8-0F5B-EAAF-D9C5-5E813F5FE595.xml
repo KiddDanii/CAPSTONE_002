@@ -1,0 +1,285 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="545B07B8-0F5B-EAAF-D9C5-5E813F5FE595" name="PACIENTE">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>5A33CE6D-426D-9B27-ED89-7CC8416257FB</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Rut_Paciente" id="87A24DD3-91BA-CDA4-E1D7-8FC40F51F144">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>79789B32-DEC1-93D9-10FF-CE0D99652FD5</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PrimerNom" id="DDCDD180-2624-12CA-C411-C55027B20E6F">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>2B7B7A2D-0C5C-9DC2-00DD-F6FD87F7872D</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SegundNom" id="7D0729F6-D09F-2890-2EA6-C99C90CFCA61">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>6CD06C13-4E0C-ABE6-3D14-3CDB3C044407</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TercerNom" id="C22D4E50-5316-AFB4-F1D1-E06073277842">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>39C6FA48-425A-F558-8CB1-AEEBD6BDA2E9</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Apellido P." id="B1F0AB21-B835-7EAF-3139-3BD5EEA7BCDA">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>9BD49990-D14B-F7C6-3110-4094E83AAAF6</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Apellido M." id="355999E5-4E52-ECCD-4E2D-C30440C5F4D4">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>1407A481-6A12-D687-6AE9-078AC24A9E3F</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefono" id="DC954809-5359-A679-CC49-E61B5BFD3A5F">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>D71E1189-9A25-4520-F2F6-86868F03DD5A</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="FE68EB11-7151-4DF2-2308-B13DB4B19022">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:24:54 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_nac" id="E36E9246-8C29-0770-56A5-964007D8E55F">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:24:54 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comuna" id="735F339A-FE98-F8AD-84FD-D6C804C62647">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:24:54 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Contraseña" id="0CB449E4-C3DB-294B-0F63-139F166FF2A1">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>87F94EFE-A24A-7A4A-9D00-5D033F6CE6DB</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rut_Estudiante" id="55B158E5-0D54-94E5-31B9-2258F5A07FE0">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>3DB2D21E-509F-D137-64F3-458C9BB9912D</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>8E368BC7-8E99-505C-30EC-49A2FDD27B13</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<referedAttribute>983D005D-4947-F391-44B2-65FDE1C39571</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID_ficha" id="6C188D00-737F-59C0-C556-15EC2CA5FAA2">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>E69FE568-2753-19DF-A331-89F784DAF2A5</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>67DB6DE8-FD5A-6C37-264D-E1884EA1BA40</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<referedAttribute>BD07DBB4-CE6B-04F2-BF4F-9083ACED10D0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>500</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idHistorial" id="478BBAE0-F92B-82D3-82DB-7C1FA689CD84">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>3E06B2D7-A4B6-57AE-8E87-58E76FF1602C</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>2F75FC29-A9AF-F871-C47B-916DC5143539</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<referedAttribute>70197D8E-98B4-FE59-F4CC-E20D39F6F8EF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IdUsuario" id="994B65A4-1A62-FEB5-5C33-E0654118380A">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>30D58DCF-E510-882A-F40C-8839FBFDADD6</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>0FB43E22-3BCC-F86C-67E5-A25026BD5E31</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<referedAttribute>6FDC04F8-825B-DFCE-C4C5-1F36906D50CC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B5F1E19A-71F3-32FE-77FF-EA304066D64F" name="PACIENTE PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<importedID>84ACE3FB-4134-7E93-D593-907192DA378C</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="false"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>87A24DD3-91BA-CDA4-E1D7-8FC40F51F144</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

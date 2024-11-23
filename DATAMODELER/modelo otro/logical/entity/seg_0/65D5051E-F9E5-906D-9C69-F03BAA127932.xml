@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="65D5051E-F9E5-906D-9C69-F03BAA127932" name="Horarios">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>FBFE2495-AFDB-B56B-4649-49D8D38EBA61</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idHorario" id="463956A6-0238-A918-089E-9D3834BBDEE8">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>0D82E0C7-4EFB-4882-F07D-BDC42AFAB030</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horaInicial" id="9F39602B-B1D8-14A2-052F-BD52C901227F">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>2A2D892E-E239-D7CE-8E32-08F64344F582</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha" id="E77253CC-A47B-A08E-7771-5754061374FA">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>1EC99554-6E3A-EF3C-201D-FF107591C819</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horaFinal" id="5AA3B629-C2FB-06AB-97BB-F307F0D10AA4">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:30:16 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rut_Estudiante" id="2335CE0B-12D2-027E-6FD2-D790B447D17B">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:33:34 UTC</createdTime>
+<generatorID>B55D90C8-5F21-EE8F-881D-667A2351BC58</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<referedAttribute>983D005D-4947-F391-44B2-65FDE1C39571</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idCita" id="BDB17192-8190-27F9-D80E-7DEA1F8FCF68">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:45:05 UTC</createdTime>
+<generatorID>1288316E-97A5-3375-BDD6-31B8506052C5</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<referedAttribute>55948C5A-4614-9046-8BD9-D44689434073</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DCE976CD-7989-82EF-5BA7-BBC00A461F38" name="Horarios PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<importedID>366AE0B1-4311-CC22-8ECC-D5FEC1329A8F</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="false"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>463956A6-0238-A918-089E-9D3834BBDEE8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

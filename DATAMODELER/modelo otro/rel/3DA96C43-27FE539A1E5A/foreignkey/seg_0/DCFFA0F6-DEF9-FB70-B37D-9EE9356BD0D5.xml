@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DCFFA0F6-DEF9-FB70-B37D-9EE9356BD0D5" containerWithKeyObject="8895764F-77A3-9EDA-E828-8AB9E8406527" localFKIndex="57F2F152-1E68-BA07-327F-66E20A82FAA7" name="PACIENTE_TipoUsuario_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>30D58DCF-E510-882A-F40C-8839FBFDADD6</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>CE0ACE43-AFFD-C1F5-BB6C-A85572DF4B48</importedID>
+<referredTableLongName>TipoUsuario</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B06CB87A-925A-1C1A-6A18-2EA8855C0343</referredTableID>
+<keyObject>DAF67E84-C041-F2D3-D633-F3E8C1ED4EE6</keyObject>
+<referredKeyID>DAF67E84-C041-F2D3-D633-F3E8C1ED4EE6</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>IdUsuario</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

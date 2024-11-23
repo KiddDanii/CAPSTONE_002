@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C3D49E61-6831-A936-88A5-32D9C132C93B" name="Comuna">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>F2136837-FD5A-89C0-DA00-A61A46951196</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>7ACA9AC9-E5A8-6B6D-B136-1B808A367DE4</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCom" id="0E4E7C6A-47CD-B4D5-7999-9E34EEEB0A11">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>418640D6-6EE3-73DA-E7DB-F2A65C18A4AA</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>85469A93-CEC9-0A52-3A6C-3F055F6E9D28</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descrip" id="C06E8F6B-6BBF-8EF7-175A-B19569904548">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>81B20D98-5A52-8629-2BE6-8B200FEBD141</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>F25ECB6E-0C85-AC92-7524-1426833B0A9E</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Ciudad_idCiudad" id="0550C02F-FC40-810A-8DDC-C624DB84AA55">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>6483C153-4813-4E75-6067-8AA57CE326D9</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>594D10ED-6C15-17C6-F88D-46E29C44F620</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32D44D4B-603A-31C6-8085-4751D5269E4D" referredColumn="A9BCA7E5-C6B9-269A-6E5E-9C9ADB7D543A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7BCD0CC7-4F1A-D282-8629-00535C481395" name="Comuna_PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>ABEC682C-E50E-47C0-AF4B-917303E94F45</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>42FCB9CE-3F4A-087C-A5D2-518C91FF2DA0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E4E7C6A-47CD-B4D5-7999-9E34EEEB0A11"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="04518D46-C385-0EBA-820A-7C9FC3499AA2" name="Comuna_Ciudad_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>32ED8FF1-81D0-D264-1D0B-B9099BB609A1</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0550C02F-FC40-810A-8DDC-C624DB84AA55"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

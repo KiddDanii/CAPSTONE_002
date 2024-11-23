@@ -1,0 +1,235 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D6D8AC22-BA36-E37A-3505-B2C4B2FF6801" name="ESTUDIANTE">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>7CCB1386-982C-E1D3-0966-409703833972</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Rut_Estudiante" id="378EEF47-983E-BA7C-5200-041F8E9AAEAD">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>983D005D-4947-F391-44B2-65FDE1C39571</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PrimerNom" id="552CFD1D-026B-ABA2-ACE8-A3082F083D41">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>9E4CDBBD-58BB-B178-DEDF-4EBFEF9408EE</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SegundNom" id="8855E550-E07A-12B3-0306-F1D98A05DFC5">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>003EE2D9-C42F-4C7D-4FB8-469ACCEE9DDD</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TercerNom" id="526BC53B-C925-8BC6-0220-212BF653B862">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>FD52E236-EB45-A351-359A-427F8CF19E62</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apellido_P." id="2206ADDC-0A93-9DD5-654E-5AB42C628F5B">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>0F68E76C-5D0B-2FA6-1CD3-830CADF4CA13</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apellido_M." id="92266062-7872-CA31-7272-91EE23B9A755">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>5D460CAD-2E68-188A-5EEF-0D23DCEA001F</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Correo_inst" id="6118D9D1-AA33-C5E7-7826-D24CBBA867F3">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>FFCD4782-64F0-5469-9382-12C0B1BD45CC</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="56435052-E048-0C28-36EA-DEA1D397B696">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>72EDCDB9-CE67-A1A0-D8E5-06982CAD62AB</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<ownDataTypeParameters>,9,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="BAB2842E-BAA3-FC8B-BFB0-96831A3A3715">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>7796FD2F-6E7E-3291-DBC5-FDF499E12364</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_nac" id="B69CFE0E-AA41-27D7-E591-325476DFD41E">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>055899DD-1CC1-8C46-D1F6-594A3AD347D5</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="comuna" id="0FD9F1C0-F80A-9A72-6FFE-8E61CF681B89">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>1451477B-0BE4-A845-CF3C-085873D1D302</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Contraseña" id="66CF3178-AF85-1BB6-CAC8-2945023138EE">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>8A069444-2DAA-AC49-1388-B914C4B73C15</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Universidad_nomUni" id="59A08883-D0E8-6D1E-4A1B-CBA7ACE45346">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>CB8B1220-355D-3489-10BC-F6A7A2F8B2E8</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="31A67BC2-B351-146D-2050-D3C31212B728" referredColumn="61B4A46B-9346-7522-F912-5A036D9DB642"/>
+</associations>
+</Column>
+<Column name="TipoUsuario_IdUsuario" id="C8BFEB56-3C57-CDFC-BD5B-BF39552B431E">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>275F9FEA-9955-6074-D5BF-077ECEF7455D</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="97CEC420-F7B5-1766-898A-66D9D9CDC9E4" referredColumn="66B53E0C-6BBF-C44E-40C1-B181394F0974"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8AB8DFF2-D967-3FAB-B82F-8CE50D3D6D01" name="ESTUDIANTE_PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>6C8AE537-EE63-5B51-E927-C1A8FE67C5B3</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="378EEF47-983E-BA7C-5200-041F8E9AAEAD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D55E14AB-81C1-420E-E3FE-93D33F97CE9A" name="ESTUDIANTE__IDX">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>2BD0CC0F-5F95-D02D-0DF8-AA60DF25B6C6</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="C8BFEB56-3C57-CDFC-BD5B-BF39552B431E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="61165DA5-569F-2A0E-B9AD-D01480C4ED06" name="ESTUDIANTE_Universidad_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:50:45 UTC</createdTime>
+<generatorID>15F4538E-4BAD-D9C3-8E42-6E91A77F54AF</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59A08883-D0E8-6D1E-4A1B-CBA7ACE45346"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0BDDC9D0-23EE-6185-5CC6-3E13A56A7AC3" name="ESTUDIANTE_TipoUsuario_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:56:29 UTC</createdTime>
+<generatorID>2BD0CC0F-5F95-D02D-0DF8-AA60DF25B6C6</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8BFEB56-3C57-CDFC-BD5B-BF39552B431E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

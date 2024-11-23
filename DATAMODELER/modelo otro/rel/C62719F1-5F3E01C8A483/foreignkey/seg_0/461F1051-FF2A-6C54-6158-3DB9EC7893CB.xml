@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="461F1051-FF2A-6C54-6158-3DB9EC7893CB" containerWithKeyObject="C8096E52-EA4C-34D9-0D9A-64107B570462" localFKIndex="8C5A9093-A47D-3C7A-A3A1-3A6B4003FD58" name="Horarios_Cita_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:56:29 UTC</createdTime>
+<generatorID>1288316E-97A5-3375-BDD6-31B8506052C5</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<referredTableLongName>Cita</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>907272DE-4EF5-DF14-33A9-62291F6C0DB9</referredTableID>
+<keyObject>E4CFB8D9-7FCC-B0DD-E99A-7232921E92EB</keyObject>
+<referredKeyID>E4CFB8D9-7FCC-B0DD-E99A-7232921E92EB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>idCita</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

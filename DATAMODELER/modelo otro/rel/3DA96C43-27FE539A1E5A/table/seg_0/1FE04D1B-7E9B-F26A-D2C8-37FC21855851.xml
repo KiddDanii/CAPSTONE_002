@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1FE04D1B-7E9B-F26A-D2C8-37FC21855851" name="Horarios">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>65D5051E-F9E5-906D-9C69-F03BAA127932</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>E8B303F5-E87B-EBAA-9EFD-755F5007FB3B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idHorario" id="9619CA92-34B6-CF7D-C6D8-71DED8BFC003">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>463956A6-0238-A918-089E-9D3834BBDEE8</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>6ECE6ECC-35A8-4C18-3878-75D7065AEB96</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HoraInicial" id="717D7054-0C99-9C29-18F3-9EC5C4D46DD0">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>9F39602B-B1D8-14A2-052F-BD52C901227F</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>DFAA76C6-7977-0D19-D40B-2248BAD8A69A</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="65869025-F29A-198D-9885-EA08B05E917D">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>E77253CC-A47B-A08E-7771-5754061374FA</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>7197CDAD-0499-9377-F80E-97E7DB4437E9</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PACIENTE_Rut_Paciente" id="032CE342-6FD9-DEA1-0C67-678CE44EC031">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>2A603FDE-741F-99E3-2DE2-84BC9097A57A</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>B070C2AB-5366-64DD-EA9A-6CC77CE52FE3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2A4C5641-B9B9-34D9-12AD-CCCAE0997B1E" referredColumn="0F5ABD94-91B0-7AE4-2387-6AEC5F4EE474"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="42B182A7-CDC0-86FE-E4E4-7BC453A8AE8E" name="Horarios_PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>DCE976CD-7989-82EF-5BA7-BBC00A461F38</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>421E6D45-E7A2-67A7-DF59-F525E4BD1456</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9619CA92-34B6-CF7D-C6D8-71DED8BFC003"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="363C1E05-A24F-5C86-5DAE-BAA05FC45A4D" name="Horarios_PACIENTE_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>C15FD2DB-C653-B5C1-6A01-46E5CD523184</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="032CE342-6FD9-DEA1-0C67-678CE44EC031"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

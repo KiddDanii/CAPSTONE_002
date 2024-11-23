@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FAA371B9-3944-E3CC-C6E0-8D743D7681EA" name="FICHA_CLINICA">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>FE4A6E02-4FCF-B95F-AA68-39F265F4CCDD</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>9E1D291B-A431-6679-0272-3A57DF549C07</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ficha" id="99CEB4F3-55E4-938B-64BE-793C37112E96">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>BD07DBB4-CE6B-04F2-BF4F-9083ACED10D0</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>ACC6B678-71FA-AA5B-0D6D-E7890EAF2AB3</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>500</dataTypePrecision>
+<ownDataTypeParameters>,500,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Antecedentes" id="FDB4AF52-2C0C-4D65-F60A-902226269F71">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>A37B4AEB-9F1F-8C2E-F528-4792FB11E45F</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>C821683E-2873-C6F2-E5E9-FCCD215D59BF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Alergias" id="0A882427-795A-EC8D-54E0-99DFECA523A4">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>F95A16D2-01BC-385D-9C0F-D24D2C843D28</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>80B88C8E-F8AC-7DBE-D8B1-FB5918542817</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PACIENTE_Rut_Paciente" id="95566CB9-D132-946A-A81C-8E4AF2DA0B07">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>57F6A58C-39F0-9C13-78AA-3217FD7673D0</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>C32F7858-E343-2722-8D6D-DD352AEDDBBE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="42BE59CE-4CCE-9A87-FA57-357334385551" referredColumn="0F5ABD94-91B0-7AE4-2387-6AEC5F4EE474"/>
+</associations>
+</Column>
+<Column name="Cirugias" id="D1B4F5B5-99F7-A7B2-679A-6965C3A3D4BC">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>C8808C08-DBBF-F67E-D52D-95BEF56EE029</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>183D3104-2891-D6DA-AAA0-22F60EF9ECEE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1B2F2631-4034-9127-C1AF-E6FC5BE187AF" name="FICHA_CLINICA_PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>61244B70-F0C4-3C58-94A8-56E7B5BB1F7C</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>FD32C56E-E252-297C-1889-7B8399E4396C</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="99CEB4F3-55E4-938B-64BE-793C37112E96"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4FD92EEB-0B6D-9C5B-FD39-36DBD9169AD6" name="FICHA_CLINICA__IDX">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>E06C6B69-8F72-4C15-9737-D45708A7DE60</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95566CB9-D132-946A-A81C-8E4AF2DA0B07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1967E754-EBAF-B281-C87C-36C75BAE49A3" name="FICHA_CLINICA_PACIENTE_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>E69FE568-2753-19DF-A331-89F784DAF2A5</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="95566CB9-D132-946A-A81C-8E4AF2DA0B07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

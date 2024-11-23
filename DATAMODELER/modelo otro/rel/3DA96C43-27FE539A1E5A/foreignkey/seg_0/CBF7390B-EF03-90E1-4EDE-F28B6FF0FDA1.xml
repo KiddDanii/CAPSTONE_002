@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CBF7390B-EF03-90E1-4EDE-F28B6FF0FDA1" containerWithKeyObject="8895764F-77A3-9EDA-E828-8AB9E8406527" localFKIndex="935EFE7A-B125-7115-71E6-E19CF6E9F67F" name="PACIENTE_FICHA_CLINICA_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>E69FE568-2753-19DF-A331-89F784DAF2A5</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>D172EA03-1EDD-4F91-85C2-5E4B3ABEC642</importedID>
+<referredTableLongName>FICHA_CLINICA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FAA371B9-3944-E3CC-C6E0-8D743D7681EA</referredTableID>
+<keyObject>1B2F2631-4034-9127-C1AF-E6FC5BE187AF</keyObject>
+<referredKeyID>1B2F2631-4034-9127-C1AF-E6FC5BE187AF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_ficha</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

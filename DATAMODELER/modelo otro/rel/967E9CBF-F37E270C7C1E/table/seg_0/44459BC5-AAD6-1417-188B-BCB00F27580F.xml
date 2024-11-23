@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="44459BC5-AAD6-1417-188B-BCB00F27580F" name="relation_2">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>D0E5BC8A-246F-7E3A-B469-B10E701C501F</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tratamiento_id_trata" id="0BEA1F5E-9CC5-2F9F-CDA6-2385AD492320">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>B3B4880B-6152-BD6B-2FEC-50C59FB2C589</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="453875FD-20D4-DC71-3AE8-27AF39422139" referredColumn="3CA5A3DA-3B80-22C6-63D5-6D53BD5EDF1C"/>
+</associations>
+</Column>
+<Column name="estudiante_rut_estudiante" id="0C1C6A59-A7C0-A1A5-929A-D83828B6A83F">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>D984F28E-2436-1435-997D-66F7FF832407</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="74B036DB-944F-4D96-F4F1-5307D9F7EF59" referredColumn="527A34E8-2BB1-EFEE-DF4F-54259B7F3314"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C5901D13-1568-71D3-ADD0-4B464AD563D9" name="relation_2_pk">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>CD4E1116-71A6-D7DD-3CC3-847329DA053C</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BEA1F5E-9CC5-2F9F-CDA6-2385AD492320"/>
+<colUsage columnID="0C1C6A59-A7C0-A1A5-929A-D83828B6A83F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5AE459B8-C354-AA95-E9C9-962ED6863D7F" name="relation_2_tratamiento_fk">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0BEA1F5E-9CC5-2F9F-CDA6-2385AD492320"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B94EAE54-53B8-367B-A848-9CF3FD14E1DF" name="relation_2_estudiante_fk">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C1C6A59-A7C0-A1A5-929A-D83828B6A83F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

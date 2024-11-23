@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_4" directorySegmentName="seg_0" id="E69FE568-2753-19DF-A331-89F784DAF2A5">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>7F0067EF-3CCA-BB02-32F5-46676B2A9916</importedID>
+<engineerTo>
+<item key="C62719F1-90C9-27A9-F9F3-5F3E01C8A483" value="true"/>
+<item key="967E9CBF-963A-B192-434A-F37E270C7C1E" value="true"/>
+<item key="3DA96C43-C8E4-9D98-39E2-27FE539A1E5A" value="true"/>
+</engineerTo>
+<sourcePk>61244B70-F0C4-3C58-94A8-56E7B5BB1F7C</sourcePk>
+<targetPk>B5F1E19A-71F3-32FE-77FF-EA304066D64F</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>FE4A6E02-4FCF-B95F-AA68-39F265F4CCDD</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>545B07B8-0F5B-EAAF-D9C5-5E813F5FE595</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

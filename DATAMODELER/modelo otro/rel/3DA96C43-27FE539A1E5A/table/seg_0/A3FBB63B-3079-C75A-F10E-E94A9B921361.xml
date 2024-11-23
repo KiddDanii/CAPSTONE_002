@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A3FBB63B-3079-C75A-F10E-E94A9B921361" name="Region">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>D0DFC2BE-6DC0-89F9-B02C-D6C9BF72FAEE</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>0D50418B-ED53-2E48-3712-92A5DB971C38</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idRegion" id="0139ED99-2AAE-FDC6-8266-5357B755680A">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>97C2EE64-C01C-F300-010E-5E29E295BD29</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>9A55A79F-F809-AB17-4911-4E7D5900D29D</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descrip" id="9E836B55-D48A-AD05-BB25-178F0A477DE5">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>3CCF15E4-6593-78C9-410A-BE53808308B9</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>D0FBF003-06A6-2AD4-2F78-5F85999139AD</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="39064543-2F14-6CEC-40B8-D56EAC97F898" name="Region_PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>9B7BA067-7B76-B645-C735-EE602E63D897</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>694DB954-4CA8-A950-9140-A83B2C4B8297</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0139ED99-2AAE-FDC6-8266-5357B755680A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="493070BE-9DBC-F0CD-09A1-DEC87E018AFD" containerWithKeyObject="234E3718-C911-48EE-4F6D-B3149833E40A" localFKIndex="3A4C4605-FD79-6C68-E4A5-27C908B1E3D4" name="HistorialMedico_PACIENTE_FK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>3E06B2D7-A4B6-57AE-8E87-58E76FF1602C</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>42611295-2831-A499-5782-C37B0156C5F2</importedID>
+<referredTableLongName>PACIENTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8895764F-77A3-9EDA-E828-8AB9E8406527</referredTableID>
+<keyObject>6E7F272C-0612-2D60-75A5-15A9ACDE1F35</keyObject>
+<referredKeyID>6E7F272C-0612-2D60-75A5-15A9ACDE1F35</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Rut_Paciente</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

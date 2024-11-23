@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2EDFF3A7-2354-DD82-4EE1-C6A6A9695BC2" name="TRATAMIENTO">
+<sourceDDLFile>SCRIPT.ddl</sourceDDLFile>
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>B616F649-0973-2A12-6D17-4D3E01B3176A</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>3E4AF7E8-2944-AE26-BA3B-F0F89DA9707A</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_trata" id="30DD5106-0807-BE18-8284-CCBF909D40FC">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>AFD83DF5-953B-EB27-3825-E020503F7F86</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>58940DC6-0C80-BB13-BD5B-94994B6EBA08</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Tipo_trat_" id="CB6C7A5D-ED8D-2D2D-7AB5-28997FC0073F">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>FD0887F5-C377-B3D1-5843-E16FE1B1BD21</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>0EF734BC-8D6B-6DA5-97A7-9D5A1D57D86F</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descripcion" id="994E6EB2-EE04-3FA5-626F-4EADC869E440">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>F88FD87A-9011-82B1-1C16-21F13D39A94F</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>1A48E0FE-FB45-4C32-BA1C-BFDF3E325A54</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="860C5DA4-2A57-EDA0-5FD1-94B4928C602E" name="TRATAMIENTO_PK">
+<createdBy>ignac</createdBy>
+<createdTime>2024-11-23 20:21:35 UTC</createdTime>
+<generatorID>BAB7DC1A-6A98-19D7-4994-748316C33142</generatorID>
+<ownerDesignName>modelo otro</ownerDesignName>
+<importedID>97F9BF28-ADB7-B987-85E8-1D7B9EA0190B</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30DD5106-0807-BE18-8284-CCBF909D40FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
