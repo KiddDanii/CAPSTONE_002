@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex; /* Usa flexbox para la disposición horizontal */
+}
+
+.sidebar {
+    width: 250px; /* Ancho fijo para la barra lateral */
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.sidebar h2, .sidebar p {
+    margin: 26px 0;
+}
+.sidebar h2 {
+    font-size: 26px;
+}
+.sidebar p {
+    font-size: 14px;
+}
+
+.content {
+    flex-grow: 1; /* Permite que la sección de contenido ocupe el espacio restante */
+    padding: 20px; /* Color de fondo para la sección de contenido */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+a {
+    text-decoration: none;
+    color: white;   
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+#horario{
+    background-color:white ;
+    color: #063C98 ;
+}
+
+#horario h3 {
+    font-family: 'Times New Roman', Times, serif;
+}

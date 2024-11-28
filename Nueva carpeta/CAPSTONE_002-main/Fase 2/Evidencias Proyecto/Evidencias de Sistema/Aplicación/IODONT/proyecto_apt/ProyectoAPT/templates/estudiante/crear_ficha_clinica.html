@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Ficha Clínica del Paciente</h2>
+    <div class="form-group">
+        <label><strong>Nombre Completo:</strong></label>
+        <p>{{ paciente.first_name }} {{ paciente.last_name }}</p>
+    </div>
+    <div class="form-group">
+        <label><strong>Correo Electrónico:</strong></label>
+        <p>{{ paciente.email }}</p>
+    </div>
+    <div class="form-group">
+        <label><strong>Fecha de Nacimiento:</strong></label>
+        <p>{{ paciente.fecha_nac }}</p>
+    </div>
+    <div class="form-group">
+        <label><strong>Dirección:</strong></label>
+        <p>{{ paciente.direccion }}</p>
+    </div>
+    <div class="form-group">
+        <label><strong>Número Telefónico:</strong></label>
+        <p>{{ paciente.num_tel }}</p>
+    </div>
+
+    <form method="POST" action="{% url 'crear_ficha_paciente' paciente.id %}">
+        {% csrf_token %}
+        <h3>Contacto en Caso de Emergencia</h3>
+        <div class="form-group">
+            {{ form.nombre_contacto_emergencia.label_tag }}
+            {{ form.nombre_contacto_emergencia }}
+            {% if form.nombre_contacto_emergencia.errors %}
+                <div class="alert alert-danger">{{ form.nombre_contacto_emergencia.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.telefono_contacto_emergencia.label_tag }}
+            {{ form.telefono_contacto_emergencia }}
+            {% if form.telefono_contacto_emergencia.errors %}
+                <div class="alert alert-danger">{{ form.telefono_contacto_emergencia.errors }}</div>
+            {% endif %}
+        </div>
+
+        <h3>Datos Clínicos</h3>
+        <div class="form-group">
+            {{ form.fecha_ultima_consulta.label_tag }}
+            {{ form.fecha_ultima_consulta }}
+            {% if form.fecha_ultima_consulta.errors %}
+                <div class="alert alert-danger">{{ form.fecha_ultima_consulta.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.motivo_consulta.label_tag }}
+            {{ form.motivo_consulta }}
+            {% if form.motivo_consulta.errors %}
+                <div class="alert alert-danger">{{ form.motivo_consulta.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.sintomas_actuales.label_tag }}
+            {{ form.sintomas_actuales }}
+            {% if form.sintomas_actuales.errors %}
+                <div class="alert alert-danger">{{ form.sintomas_actuales.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.diagnostico.label_tag }}
+            {{ form.diagnostico }}
+            {% if form.diagnostico.errors %}
+                <div class="alert alert-danger">{{ form.diagnostico.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.tratamiento_actual.label_tag }}
+            {{ form.tratamiento_actual }}
+            {% if form.tratamiento_actual.errors %}
+                <div class="alert alert-danger">{{ form.tratamiento_actual.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            {{ form.proxima_cita.label_tag }}
+            {{ form.proxima_cita }}
+            {% if form.proxima_cita.errors %}
+                <div class="alert alert-danger">{{ form.proxima_cita.errors }}</div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Guardar Ficha</button>
+    </form>
+</div>
+
+<!-- Bloque para mostrar mensajes de Django -->
+{% if messages %}
+  <div class="alert-container">
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+
+{% endblock %}

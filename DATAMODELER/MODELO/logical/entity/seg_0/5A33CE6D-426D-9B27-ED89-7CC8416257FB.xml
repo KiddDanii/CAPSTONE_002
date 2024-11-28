@@ -28,13 +28,40 @@
 <dataTypeSize>9</dataTypeSize>
 <ownDataTypeParameters>9,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Nombres" id="9E146B2B-60D1-CE88-CC7D-950E0E21D0E6">
+<Attribute name="PrimerNom" id="2B7B7A2D-0C5C-9DC2-00DD-F6FD87F7872D">
 <createdBy>ignac</createdBy>
-<createdTime>2024-09-24 22:30:08 UTC</createdTime>
+<createdTime>2024-10-07 14:09:45 UTC</createdTime>
 <ownerDesignName>MODELO</ownerDesignName>
 <engineerTo>
 <item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
 </engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SegundNom" id="6CD06C13-4E0C-ABE6-3D14-3CDB3C044407">
+<createdBy>ignac</createdBy>
+<createdTime>2024-10-07 14:09:45 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TercerNom" id="39C6FA48-425A-F558-8CB1-AEEBD6BDA2E9">
+<createdBy>ignac</createdBy>
+<createdTime>2024-10-07 14:09:45 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -119,7 +146,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>9</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ID_ficha" id="67DB6DE8-FD5A-6C37-264D-E1884EA1BA40">
 <createdBy>ignac</createdBy>
@@ -134,6 +161,36 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>500</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idHistorial" id="2F75FC29-A9AF-F871-C47B-916DC5143539">
+<createdBy>ignac</createdBy>
+<createdTime>2024-10-07 14:24:07 UTC</createdTime>
+<generatorID>01ACBC43-1F6B-DF39-94AE-179F1DAD6066</generatorID>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<referedAttribute>C238456D-AEF7-0FDC-3886-6F873CA9B4F3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IdUsuario" id="0FB43E22-3BCC-F86C-67E5-A25026BD5E31">
+<createdBy>ignac</createdBy>
+<createdTime>2024-10-07 14:33:24 UTC</createdTime>
+<generatorID>51B37355-29DD-AC08-FF40-C6A35C344162</generatorID>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<referedAttribute>76CB87FA-4605-0CC0-FAAF-2D7583CDCBF3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

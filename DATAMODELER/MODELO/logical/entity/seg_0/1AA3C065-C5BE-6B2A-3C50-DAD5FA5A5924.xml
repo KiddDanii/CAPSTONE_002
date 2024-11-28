@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CA5F267E-ABF7-F80F-D305-982DA1E35537" name="SOLICITUD_CITA">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1AA3C065-C5BE-6B2A-3C50-DAD5FA5A5924" name="TipoUsuario">
 <createdBy>ignac</createdBy>
-<createdTime>2024-09-24 22:08:03 UTC</createdTime>
+<createdTime>2024-10-07 13:35:01 UTC</createdTime>
 <ownerDesignName>MODELO</ownerDesignName>
 <engineerTo>
 <item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
@@ -15,61 +15,55 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_cita" id="7C6D24A6-EC28-76EC-8679-D7D4E3A323C8">
+<Attribute name="IdUsuario" id="76CB87FA-4605-0CC0-FAAF-2D7583CDCBF3">
 <createdBy>ignac</createdBy>
-<createdTime>2024-09-24 22:41:13 UTC</createdTime>
+<createdTime>2024-10-07 13:35:10 UTC</createdTime>
 <ownerDesignName>MODELO</ownerDesignName>
 <engineerTo>
 <item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>1000</dataTypePrecision>
-<ownDataTypeParameters>,1000,</ownDataTypeParameters>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fecha_soli" id="D9A4FABE-E1D9-E8C4-8443-E99AF35AEDA8">
+<Attribute name="TipoUsuario" id="57B42CE5-DBB7-1DE4-6AB1-7DF5E6743011">
 <createdBy>ignac</createdBy>
-<createdTime>2024-09-24 22:41:29 UTC</createdTime>
+<createdTime>2024-10-07 13:35:53 UTC</createdTime>
 <ownerDesignName>MODELO</ownerDesignName>
 <engineerTo>
 <item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT008</logicalDatatype>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<listOfValues>
+<valueDef value="Estudiante" description=""/>
+<valueDef value="Paciente" description=""/>
+</listOfValues>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Rut_Estudiante" id="0CF933F6-7004-D049-9407-B4B93F799D77">
+<createdBy>ignac</createdBy>
+<createdTime>2024-10-07 14:33:17 UTC</createdTime>
+<generatorID>2A187185-2634-DEB0-E1F8-7E426D9B1360</generatorID>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<referedAttribute>39665B3B-5706-5314-1834-C4270DFF45D7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="tratamiento" id="2899CEFA-7781-2340-5651-CEB97A62799A">
+<Attribute name="Rut_Paciente" id="541AD258-FBF6-CF22-8F06-B8BB0C5FCD68">
 <createdBy>ignac</createdBy>
-<createdTime>2024-09-24 22:41:49 UTC</createdTime>
-<ownerDesignName>MODELO</ownerDesignName>
-<engineerTo>
-<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100</dataTypeSize>
-<ownDataTypeParameters>100,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Nombre_Estudiante" id="364B8FA7-725B-729F-B1FA-B77E058DE3C1">
-<createdBy>ignac</createdBy>
-<createdTime>2024-09-24 22:46:25 UTC</createdTime>
-<ownerDesignName>MODELO</ownerDesignName>
-<engineerTo>
-<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100</dataTypeSize>
-<ownDataTypeParameters>100,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="Rut_Paciente" id="ABE2FF95-4DFD-A80B-C2DC-EDF2BC361425">
-<createdBy>ignac</createdBy>
-<createdTime>2024-09-24 22:50:21 UTC</createdTime>
-<generatorID>2D2099AC-BD1B-EFD0-E0A8-52974C58FE1A</generatorID>
+<createdTime>2024-10-07 14:33:22 UTC</createdTime>
+<generatorID>51B37355-29DD-AC08-FF40-C6A35C344162</generatorID>
 <ownerDesignName>MODELO</ownerDesignName>
 <engineerTo>
 <item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
@@ -83,16 +77,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="702255E3-CC6B-FE59-4E41-6083B95938A3" name="SOLICITUD_CITA PK">
+<identifier id="A33417A6-65B2-5872-BE57-3ABFA8D7150A" name="TipoUsuario PK">
 <createdBy>ignac</createdBy>
-<createdTime>2024-09-24 22:41:28 UTC</createdTime>
+<createdTime>2024-10-07 13:35:44 UTC</createdTime>
 <ownerDesignName>MODELO</ownerDesignName>
 <engineerTo>
 <item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>7C6D24A6-EC28-76EC-8679-D7D4E3A323C8</attributeRef>
+<attributeRef>76CB87FA-4605-0CC0-FAAF-2D7583CDCBF3</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

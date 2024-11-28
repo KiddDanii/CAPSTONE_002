@@ -28,13 +28,40 @@
 <dataTypeSize>9</dataTypeSize>
 <ownDataTypeParameters>9,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Nombres" id="1A7B9C4E-010E-9A24-1E4B-543915E4899C">
+<Attribute name="PrimerNom" id="1A7B9C4E-010E-9A24-1E4B-543915E4899C">
 <createdBy>ignac</createdBy>
 <createdTime>2024-09-24 22:36:03 UTC</createdTime>
 <ownerDesignName>MODELO</ownerDesignName>
 <engineerTo>
 <item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
 </engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SegundNom" id="3FD3431E-E81E-57DE-7BEC-4834602B2E68">
+<createdBy>ignac</createdBy>
+<createdTime>2024-10-07 14:07:07 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TercerNom" id="536FF9AC-D5B9-BB6F-C14A-7FF5E0B248E4">
+<createdBy>ignac</createdBy>
+<createdTime>2024-10-07 14:07:04 UTC</createdTime>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -105,6 +132,36 @@
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nomUni" id="8CA67754-9044-888F-26DF-E1937CC46621">
+<createdBy>ignac</createdBy>
+<createdTime>2024-10-07 14:23:34 UTC</createdTime>
+<generatorID>25A2228E-7C62-7FA6-44B0-86170C0476A1</generatorID>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<referedAttribute>2C20D426-FD21-9AFC-4674-7CDEAFA05EB1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IdUsuario" id="1DBAF119-B8E6-0EFE-184E-07F138F5EBEF">
+<createdBy>ignac</createdBy>
+<createdTime>2024-10-07 14:33:14 UTC</createdTime>
+<generatorID>2A187185-2634-DEB0-E1F8-7E426D9B1360</generatorID>
+<ownerDesignName>MODELO</ownerDesignName>
+<engineerTo>
+<item key="1EB4A23C-8E00-A36E-35AE-4163760DAB94" value="true"/>
+</engineerTo>
+<referedAttribute>76CB87FA-4605-0CC0-FAAF-2D7583CDCBF3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

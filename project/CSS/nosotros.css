@@ -1,0 +1,174 @@
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    .featurette {
+        margin: -2em 3em -2em 3em;
+    }
+
+    .featurette-divider {
+        margin: 5rem 0;
+    }
+
+    .featurette-heading {
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -.05rem;
+    }
+
+    #areaLink {
+        margin-top: -8em;
+    }
+
+    #intro {
+        margin-bottom: -7em;
+    }
+
+    img {
+        height: 500px;
+        width: 500px;
+    }
+
+}
+
+@media (min-width: 40em) {
+
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+
+
+    /* html {
+        width: 100% !important;
+        margin: auto;
+    } */
+
+    img {
+        width: 80%;
+    }
+
+    p{
+        text-align: justify;
+    }
+
+    /* body {
+        margin: 0em 1em 0em 1em;
+    } */
+
+    /* .col-md-7 {
+        padding: 0em 1em 0em 1em;
+    }
+
+    .py-5 {
+        padding-bottom: 0em !important;
+    } */
+
+    /* .featurette-divider {
+        margin: 2em 0em 2em 0em;
+    }
+
+    #arealink {
+        padding-top: 0em !important;
+        margin-bottom: 4em !important;
+    } */
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 425px) {
+
+    img {
+        width: 20em;
+        height: 20em;
+        display: flex;
+        
+    }
+
+    .imgDiv{
+        display: flex;
+        justify-content: center;
+    }
+
+   #intro,#main,#areaLink {
+        padding: 1em;
+    }
+
+    #arealink {
+        padding-top: 0em !important;
+        margin-bottom: 4em !important;
+    }
+
+}
+  
+/* For tablets: */
+  @media only screen and (min-width: 450px) {
+
+    img {
+        width: 20em;
+        height: 20em;
+        
+        
+    }
+
+    .imgDiv{
+        display: flex;
+        justify-content: center;
+    }
+
+   #intro,#main,#areaLink {
+        padding: 1em;
+    }
+  }
+  
+  @media only screen and (min-width: 900px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+
+.Pat{
+    width: 3em;
+    height: 3em;
+}
+
+body{
+    background-color: #afafff;
+}
+
+.imagenes{
+    height: 50px;
+    display: inline-block;
+}
+
+#footer{
+    background: #000000;
+    color: azure;
+    
+}

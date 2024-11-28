@@ -1,0 +1,128 @@
+body{
+    background-color: #afafff;
+}
+
+.carousel{
+    margin: 50px;
+    padding: 20px;
+}
+
+.brand img{
+    width: 60px;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titulo{
+    color: azure;
+}
+
+section{
+    text-align: left;
+}
+
+.parrafo{
+    background: rgb(22, 173, 22);
+    color: azure;
+    border: 1px solid #000000;
+    margin: 0 auto;
+    padding: 50px;
+    box-shadow: 10px 10px 5px black;
+    width: 40%;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.navbar-brand{
+    color: azure;
+}
+
+.nav-enlace{
+    background: mediumpurple;
+    color: beige;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-enlace:hover{
+    background: purple;
+
+}
+nav{
+    background: rgb(2, 73, 34) ;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.x{
+
+    background: mediumpurple;
+    color: beige;
+    padding: 10px 0;
+    border: 2px solid beige;
+    display: none;
+
+}
+
+
+@media (max-width: 500px) {
+    nav{
+    flex-direction: column;
+    }
+    .nav-enlace{
+        margin: 10px 0;
+    }
+    .x{
+        display: inline-block;
+    }
+    .hide{
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .parrafo {
+        width: 93%;
+        margin-bottom: 30px;
+    }
+
+    #bloques{
+        width: auto;
+    }
+}
+
+
+@media (max-width: 1070px) {
+    .parrafo {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+#footer{
+    background: #000000;
+    color: azure;
+    margin-top: 50px;
+}
+
+img{
+    border-radius: 75px;
+}
+
+.Pat{
+	width: 3em;
+}

@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+  }
+
+
+.sidebar {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    width: 240px;
+}
+
+.container {
+    display: flex; /* Usa flexbox para la disposición horizontal */
+}
+
+.sidebar h2, .sidebar p {
+    margin: 26px 0;
+}
+.sidebar h2 {
+    font-size: 26px;
+}
+.sidebar p {
+    font-size: 14px;
+}
+
+.contentNoti {
+    padding: 20px;
+    flex-grow: 1;
+    float: right;
+    right: 730px;
+    position: absolute;
+    top: 160px;
+}
+
+a {
+    text-decoration: none;
+    color: white !important;
+    
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
