@@ -1,8 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.models import BaseUserManager
-
+from django.core.validators import FileExtensionValidator, MinLengthValidator, RegexValidator
+from django.core.exceptions import ValidationError
 # Create your models here.
+from datetime import datetime
+from django.utils import timezone
+from datetime import date
 
 #TipoUsuario
 class TipoUsuario(models.Model):
@@ -37,40 +41,150 @@ class CustomUserManager(BaseUserManager):
             raise ValueError('El superusuario debe tener is_superuser=True.')
 
         return self.create_user(email, password, **extra_fields)
-        
-#MODELO DE USUARIO;
-class customuser(AbstractUser):
-    id = models.BigAutoField(primary_key=True)
-    email = models.EmailField(unique=True)
-    rut = models.CharField(max_length=100, unique=True)
-    id_tipo_user = models.ForeignKey('TipoUsuario', on_delete=models.SET_NULL, null=True)
-    descripcion = models.TextField(null=True)
-    imageBlob = models.ImageField(upload_to='imagenes_usuario/', blank=True, null=True)
-    fecha_nac = models.DateField(null=True)
-    num_tel = models.IntegerField(null=True)
-    direccion = models.TextField(null=True)
-
-    USERNAME_FIELD = 'email'  # Usar email para el inicio de sesión
-    REQUIRED_FIELDS = []
-
-    objects = CustomUserManager()
-
-    def save(self, *args, **kwargs):
-        if not self.username:  # Generar un username basado en el email
-            self.username = self.email.split('@')[0]
-        super().save(*args, **kwargs)
-
-    def __str__(self):
-        return self.email
     
-        
+    #filtros universidades y tratamientos
+class Universidad(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    nombre = models.CharField(max_length=100, unique=True)
+    direccion = models.TextField(null=True, blank=True)
+    
+    def __str__(self):
+        return self.nombre
+
+
 class tipoTratamiento(models.Model):
     id = models.BigAutoField(primary_key=True)
     nombreTratamiento= models.CharField(max_length=50)
     descripcion = models.TextField()
 
     def __str__(self):
-        return str(self.id)
+        return self.nombreTratamiento
+
+class Comuna(models.Model):
+    id = models.CharField(max_length=10, primary_key=True)  # Usamos id pero contendrá el código
+    nombreComuna = models.CharField(max_length=50)
+
+    class Meta:
+        db_table = 'proyectoapt_comuna'  # Especificamos el nombre exacto de la tabla
+
+    def __str__(self):
+        return self.nombreComuna
+
+
+
+def validar_fecha_nacimiento(fecha):
+    if fecha >= date.today():
+        return False
+    return True
+        
+        
+class customuser(AbstractUser):
+    id = models.BigAutoField(primary_key=True)
+    email = models.EmailField(unique=True, null=True)
+    rut = models.CharField(max_length=13, unique=True, null=True)
+    id_tipo_user = models.ForeignKey('TipoUsuario', on_delete=models.SET_NULL, null=True)
+    descripcion = models.TextField(null=True, blank=True)
+    imageBlob = models.ImageField(default="imagenes_usuario/profiledefault.jpg", upload_to='imagenes_usuario/', blank=True, null=True)
+    fecha_nac = models.DateField(
+        validators=[validar_fecha_nacimiento],
+        null=True,  # Permitir null
+        blank=True  # Permitir blank
+    )
+    num_tel = models.CharField(
+        max_length=9,
+        null=True,
+        validators=[
+            MinLengthValidator(9, message='Asegúrate de que el numero tenga al menos 9 digitos'),
+            RegexValidator(
+                regex=r'^\d{9}$',
+                message='Ingresa un número válido de 9 dígitos'
+            )
+        ]
+    )
+    direccion = models.TextField(null=True, blank=True)
+    universidad = models.ForeignKey(Universidad, on_delete=models.SET_NULL, null=True, blank=True)
+    comuna = models.ForeignKey(Comuna, on_delete=models.SET_NULL, null=True, blank=True)
+    tratamientos = models.ManyToManyField(tipoTratamiento, blank=True)
+    Certificado = models.FileField(
+        upload_to='documentos_estudiantes/',
+        null=True,
+        blank=True,
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=['pdf'],
+                message='Solo se permiten archivos PDF'
+            )
+        ],
+        help_text='Sube un certificado en formato PDF'
+    )
+
+    # Nuevo campo para manejar el estado de aprobación
+    ESTADO_CHOICES = [
+        ('pendiente', 'Pendiente'),
+        ('aprobado', 'Aprobado'),
+        ('rechazado', 'Rechazado')
+    ]
+    estado_aprobacion = models.CharField(max_length=10, choices=ESTADO_CHOICES, default='pendiente')
+
+    USERNAME_FIELD = 'email'  # Usar email para el inicio de sesión
+    REQUIRED_FIELDS = []
+
+    objects = CustomUserManager()
+
+    def clean(self):
+        # Si es staff, no hacemos validaciones
+        if self.is_staff:
+            return
+        
+        super().clean()
+        # Validaciones solo para usuarios no staff
+        if self.fecha_nac and self.fecha_nac >= date.today():
+            raise ValidationError({
+                'fecha_nac': 'La fecha de nacimiento no puede ser la misma de hoy o futura.'
+            })
+        
+        # Validación del certificado solo para estudiantes no staff
+        if not self.pk:  # Si es un nuevo usuario
+            if self.id_tipo_user and self.id_tipo_user.nombre_tipo_usuario == 'Estudiante':
+                if not self.Certificado:
+                    raise ValidationError({
+                        'Certificado': 'El certificado es obligatorio para estudiantes'
+                    })
+
+    def save(self, *args, **kwargs):
+        # Si es staff, solo asignamos username si es necesario
+        if self.is_staff:
+            if not self.username and self.email:
+                self.username = self.email.split('@')[0]
+            super().save(*args, **kwargs)
+            return
+        
+        # Para usuarios no staff, hacemos todas las validaciones
+        if not self.username and self.email:
+            self.username = self.email.split('@')[0]
+        self.full_clean()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.email
+    
+    def obtenerTratamiento(self):
+        # Devuelve tratamientos activos del estudiante
+        return tipoTratamiento.objects.filter(
+            id__in=horarios.objects.filter(
+                estudiante=self,
+                fecha_seleccionada__gte=datetime.now().date()
+            ).values_list('tipoTratamiento_id', flat=True).distinct()
+        )
+    
+    def is_approved(self):
+        # Comprueba si el usuario está aprobado
+        return self.estado_aprobacion == 'aprobado'
+    
+        
+    def obtenerUniversidad (self):
+        return Universidad.objects.get(id=self.id_universidad)['nombre']
+
         
 
     
@@ -78,12 +192,10 @@ class FichaClinica(models.Model):
     idFicha = models.BigAutoField(primary_key=True)
     paciente = models.ForeignKey(customuser, on_delete=models.SET_NULL, null=True, default=None)
     tratamiento = models.ForeignKey(tipoTratamiento, on_delete=models.SET_NULL, null=True, default=None)
-    fecha_ultima_consulta = models.DateField(null=True)
     motivo_consulta = models.TextField(null=True)
     sintomas_actuales = models.TextField(null=True)
     diagnostico = models.TextField(null=True)
     tratamiento_actual = models.TextField(null=True)
-    proxima_cita = models.DateField(null=True)
     nombre_contacto_emergencia = models.TextField(null=True)
     telefono_contacto_emergencia = models.IntegerField(null=True)
 
@@ -93,23 +205,50 @@ class FichaClinica(models.Model):
 
 
 
+
+
+
+
 class horarios(models.Model):
     id = models.BigAutoField(primary_key=True)
-    tipoTratamiento = models.ForeignKey(tipoTratamiento, on_delete = models.SET_NULL, null=True, default=None)
+    estudiante = models.ForeignKey(
+        customuser, 
+        on_delete=models.CASCADE, 
+        related_name='horarios_estudiante',
+        null=True,
+        blank=True
+    )
+    tipoTratamiento = models.ForeignKey(
+        tipoTratamiento, 
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True
+    )
     inicio = models.TimeField()
+    fin = models.TimeField(null=True, blank=True)
     fecha_seleccionada = models.DateField()
-    estudiante = models.ForeignKey(customuser, on_delete=models.SET_NULL, null=True, default=None, related_name="horarios_estudiante")
-    paciente = models.ForeignKey(customuser, on_delete=models.SET_NULL, null=True, default=None, related_name="horarios_paciente_views")
-    ficha_clinica = models.ForeignKey(FichaClinica, on_delete=models.SET_NULL, null=True, blank=True)
-    def _str_(self):
-         return str(self.id)
-    
-    def __str__(self):
-        return f"Cita con {self.paciente} el {self.fecha_seleccionada} a las {self.inicio}"
+    paciente = models.ForeignKey(
+        customuser, 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        blank=True, 
+        related_name='horarios_paciente'
+    )
+    ficha_clinica = models.ForeignKey(
+        'FichaClinica', 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        blank=True
+    )
 
+    class Meta:
+        verbose_name = 'Horario'
+        verbose_name_plural = 'Horarios'
 
     def __str__(self):
-        return f"Ficha Clínica de {self.paciente.email} - Última consulta: {self.fecha_ultima_consulta}"
+        if self.paciente:
+            return f"Cita con {self.paciente.email} el {self.fecha_seleccionada} a las {self.inicio}"
+        return f"Horario disponible el {self.fecha_seleccionada} a las {self.inicio}"
 
 # models.py
 
@@ -117,9 +256,44 @@ class Cita(models.Model):
     paciente = models.ForeignKey(customuser, on_delete=models.CASCADE, related_name='citas_paciente')
     estudiante = models.ForeignKey(customuser, on_delete=models.CASCADE, related_name='citas_estudiante')
     tipotratamiento = models.ForeignKey(tipoTratamiento, on_delete=models.SET_NULL, null=True)
+    comuna = models.ForeignKey(Comuna, on_delete=models.SET_NULL, null=True)
     fecha_seleccionada = models.DateField()
     inicio = models.TimeField()
-
+    direccion = models.ForeignKey(Universidad, on_delete=models.SET_NULL, null=True)
     def __str__(self):
         return f"Cita de {self.paciente.email} con {self.estudiante.email} para {self.tipotratamiento.nombreTratamiento} el {self.fecha_seleccionada} a las {self.inicio}"
 
+
+class Historial_Medico(models.Model):
+    idHistorial = models.BigAutoField(primary_key=True)
+    paciente = models.ForeignKey(customuser, on_delete=models.SET_NULL, null=True, default=None)
+    fecha_cita = models.ForeignKey(Cita, on_delete=models.SET_NULL, null=True)
+    medicamentos = models.TextField(null=True)
+    diagnostico = models.TextField(null=True)
+
+    def _str_(self):
+         return str(self.idHistorial)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#NO OCUPAR ESTA TABLA PORQUE YA ESTA CREADA, BORRAR DESDE EL MYSQL
+class Tratamiento(models.Model): #NO OCUPAR ESTA TABLA PORQUE YA ESTA CREADA, BORRAR DESDE EL MYSQL
+    id = models.BigAutoField(primary_key=True) #NO OCUPAR ESTA TABLA PORQUE YA ESTA CREADA, BORRAR DESDE EL MYSQL
+    nombre = models.CharField(max_length=100, unique=True) #NO OCUPAR ESTA TABLA PORQUE YA ESTA CREADA, BORRAR DESDE EL MYSQL
+    descripcion = models.TextField(null=True, blank=True) #NO OCUPAR ESTA TABLA PORQUE YA ESTA CREADA, BORRAR DESDE EL MYSQL
+    
+    def __str__(self):
+        return self.nombre
+    
