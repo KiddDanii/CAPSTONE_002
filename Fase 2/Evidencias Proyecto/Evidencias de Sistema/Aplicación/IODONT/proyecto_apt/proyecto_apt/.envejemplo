@@ -1,5 +1,7 @@
 # Cambiar el nombre de este archivo a .env
-USERNAME = root
-PASSWORD = "tu contraseña" #tu contraseña
-PORT = 3306 #tu puerto
+USERNAME = 'root'
+PASSWORD = 'contraseña' #tu contraseña
+PORT = 3307 #tu puerto
 SECRET_KEY = 'django-insecure-oyw23el2o19&c43q3-&wt-52jfg-(x-083tk+i6kw0qmbj0@n@'
+EMAIL_HOST_USER = 'aaaa'
+EMAIL_HOST_PASSWORD = 'aaa'

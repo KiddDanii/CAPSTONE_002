@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/ver_ficha.css' %}">
+<div class="container">
+    <h2>Ficha Clínica</h2>
+    <div class="ficha-item">
+        <div class="ficha-label">Motivo de Consulta:</div>
+        <div class="ficha-content">{{ ficha_clinica.motivo_consulta }}</div>
+    </div>
+    <div class="ficha-item">
+        <div class="ficha-label">Síntomas Actuales:</div>
+        <div class="ficha-content">{{ ficha_clinica.sintomas_actuales }}</div>
+    </div>
+    <div class="ficha-item">
+        <div class="ficha-label">Diagnóstico:</div>
+        <div class="ficha-content">{{ ficha_clinica.diagnostico }}</div>
+    </div>
+    <div class="ficha-item">
+        <div class="ficha-label">Tratamiento Actual:</div>
+        <div class="ficha-content">{{ ficha_clinica.tratamiento_actual }}</div>
+    </div>
+    <div class="ficha-item">
+        <div class="ficha-label">Contacto de Emergencia:</div>
+        <div class="ficha-content">{{ ficha_clinica.nombre_contacto_emergencia }}</div>
+    </div>
+    <div class="ficha-item">
+        <div class="ficha-label">Teléfono de Emergencia:</div>
+        <div class="ficha-content">{{ ficha_clinica.telefono_contacto_emergencia }}</div>
+    </div>
+    <div class="ficha-item">    
+            <a
+                name="Btn-exportar"
+                id="exportar"
+                class="btn btn-primary"
+                type="button"
+                value="Button"
+                href="{% url 'fichaExportar' ficha_clinica.paciente.id %}"
+            >Exportar</a>
+            
+    </div>
+</div>
+{% endblock %}

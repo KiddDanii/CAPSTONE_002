@@ -1,8 +1,6 @@
 {% extends "base.html" %} <!-- Extendemos del BASE.html en la raiz de templates-->
-{%block content%} <!--Cargamos el bloque en la raiz para modificarlo-->
 {%load static %} <!-- Cargamos los archivos ESTATICOS para la pagina-->
-<!DOCTYPE html>
-<html lang="es">
+{%block content%} <!--Cargamos el bloque en la raiz para modificarlo-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +10,7 @@
   
 </head>
 <body>
-
+  <div class="container">
   <div class="sidebar">
     <h2>Perfil</h2>
     <a href="{% url 'infoestudiante' %}">Modificar Perfil</a>
@@ -20,16 +18,13 @@
     <h2>Mis Pacientes</h2>
     <a href="{% url 'pacientes_est' %}">Ver Pacientes</a>
 
-    <h2>Publicación</h2>
-    <a href="{% url 'publicacion_est' %}">Publicación en lodont</a>
-
     <h2>Notificaciones</h2>
     <a href="{% url 'notificaciones' %}">Ver Notificaciones</a>
 
     <h2>Mi Calendario</h2>
     <a href="{% url 'calendario' %}">Organizar horarios</a>
   </div>
-
+</div>
   <!-- Bloque para mostrar mensajes de Django -->
 {% if messages %}
 <div class="alert-container">
@@ -44,23 +39,44 @@
 
   <div class="infoPe">
     <h1>Información Personal</h1>
+    
+    <!-- Agregamos el mensaje de contacto -->
+    <div class="alert alert-info" role="alert">
+      <p><strong>Nota:</strong> Para cualquier cambio a realizar, comunicarse con el soporte.</p>
+      <p>Contacto: <a href="mailto:proyectoapt134@gmail.com">proyectoapt134@gmail.com</a></p>
+    </div>
 
-    <form>
-      <label for="nombre">Nombre Completo:</label><br>
-      <input type="text" id="nombre" name="nombre" value="{{ user.first_name }} {{ user.last_name }}"><br>
-
-      <label for="email">Direccion de correo electronico:</label><br>
-      <input type="email" id="email" name="email" value="{{ user.email }}"><br>
-
-      <label for="id">ID estudiante:</label><br>
-      <input type="text" id="id" name="id" value="{{ user.id }}"><br>
-
-      <label for="fecha_nacimiento">Fecha de Nacimiento: </label><br>
-      <input type="text" id="id" name="id" value="{{ user.fecha_nac }}"><br>
-
-    </form>
+    <div class="img">
+      <img src="{{ user.imageBlob.url }}" alt="Foto de perfil" width="150" height="150">
+    </div>
+    
+    <!-- MODIFICACION PARA QUE SE VEA BIEN LOS TRATAMIENTOS EN INFOPERSONAL -->
+    <!-- MIRAR FORM.PY class ModificarPerfil -->
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="form-group"> 
+            {% if field.name == 'tratamientos' %} TRATAMIENTOS:
+                <div class="tratamientos-container">
+                    {% for checkbox in field %}
+                        <div class="tratamientos-checkbox">
+                            <label for="{{ checkbox.id_for_label }}">{{ checkbox.choice_label }}</label>
+                            {{ checkbox.tag }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% elif field.name == 'imageBlob' %}
+              <input type="file" name="imageBlob" accept="image/*" placeholder="Subir imagen" id="id_imageBlob">
+            {% else %}
+                {{ field.label_tag }}
+                {{ field }}
+            {% endif %}
+        </div>
+    {% endfor %}
+    <button type="submit">Guardar Cambios</button>
+</form>
+  </div>
 
   {% endblock %}
 
 </body>
-</html>
