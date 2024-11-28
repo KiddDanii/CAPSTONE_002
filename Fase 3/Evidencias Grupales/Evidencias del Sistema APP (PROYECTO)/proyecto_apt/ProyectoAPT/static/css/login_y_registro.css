@@ -1,0 +1,174 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.loginRegister {
+    min-height: 10vh;
+    padding: 5px;
+}
+
+.formLoginRegister {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.grupo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.error {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.registerbtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.registerbtn, .btn-primary {
+    width: auto;  /* o un tamaño específico como 200px */
+    padding:  20px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Si el botón es de tipo submit */
+input[type="submit"] {
+    width: auto;  /* o un tamaño específico */
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+.registerbtn:hover {
+    background-color: #0056b3;
+}
+
+.alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-dismissible .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.75rem 1.25rem;
+    color: inherit;
+}
+
+/* Estilos específicos para el campo de dirección */
+#id_direccion {
+    height: 80px; /* Ajusta esto según tus necesidades */
+}
+
+/* Estilos para hacer el formulario más compacto en pantallas pequeñas */
+@media (max-width: 768px) {
+    .formLoginRegister {
+        padding: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+        font-size: 14px;
+    }
+}
+/* CSS PARA EL DOCUMENTO PDF*/
+
+/* Para el campo de archivo */
+input[type="file"] {
+    width: auto;
+    max-width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+/* Para el contenedor del campo de archivo */
+.grupo input[type="file"] {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Estilos para el captcha */
+.captcha {
+    width: 200px;  /* Ancho personalizado */
+    height: auto;  /* Altura automática para mantener proporción */
+    margin: 10px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Contenedor del captcha */
+.form-group img.captcha {
+    transform: scale(1.2);  /* Hace el captcha 20% más grande */
+    margin: 15px 20px;
+    display: block;
+}
+
+/* Estilo para el input del captcha */
+#id_captcha_1 {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 10px;
+}

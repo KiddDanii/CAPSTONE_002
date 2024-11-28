@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<link type="text/css" rel="stylesheet" href='{% static "css/historial_medico.css" %}'>
+
+<div class="ficha-container">
+    <div class="ficha-header">
+        <div class="header-content">
+            <h2>HISTORIAL MÉDICO</h2>
+            <p class="fecha-actual">Fecha: {% now "d/m/Y" %}</p>
+        </div>
+    </div>
+
+    <div class="ficha-section datos-paciente">
+        <h3>DATOS DEL PACIENTE</h3>
+        <div class="datos-grid">
+            <div class="dato-item">
+                <span class="dato-label">Nombre Completo:</span>
+                <span class="dato-valor">{{ paciente.first_name }} {{ paciente.last_name }}</span>
+            </div>
+            <div class="dato-item">
+                <span class="dato-label">Correo Electrónico:</span>
+                <span class="dato-valor">{{ paciente.email }}</span>
+            </div>
+            <div class="dato-item">
+                <span class="dato-label">Fecha de Nacimiento:</span>
+                <span class="dato-valor">{{ fecha_nacimiento }}</span>
+            </div>
+            <div class="dato-item">
+                <span class="dato-label">Dirección:</span>
+                <span class="dato-valor">{{ paciente.direccion }}</span>
+            </div>
+            <div class="dato-item">
+                <span class="dato-label">Teléfono:</span>
+                <span class="dato-valor">{{ paciente.num_tel }}</span>
+            </div>
+            <div class="dato-item">
+                <span class="dato-label">Fecha de la Cita:</span>
+                <span class="dato-valor">{{ fecha_cita }}</span>
+            </div>
+        </div>
+    </div>
+
+    <form method="POST" action="{% url 'crear_historial_medico' paciente.id %}" class="ficha-form">
+        {% csrf_token %}
+        
+        <div class="ficha-section evaluacion-clinica">
+            <h3>RECETA MÉDICA</h3>
+            <div class="form-grid">
+                <div class="form-group full-width">
+                    {{ form.diagnostico.label_tag }}
+                    {{ form.diagnostico }}
+                    {% if form.diagnostico.errors %}
+                        <div class="error-message">{{ form.diagnostico.errors }}</div>
+                    {% endif %}
+                </div>
+                <div class="form-group full-width">
+                    {{ form.medicamentos.label_tag }}
+                    {{ form.medicamentos }}
+                    {% if form.medicamentos.errors %}
+                        <div class="error-message">{{ form.medicamentos.errors }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <div class="button-group">
+                <a href="{% url 'pacientes_est' %}" class="btn-volver">
+                    <i class="fas fa-arrow-left"></i> Volver
+                </a>
+                <button type="submit" class="btn-guardar">
+                    <i class="fas fa-save"></i> Guardar Historial
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% if messages %}
+<div class="messages-container">
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% endblock %}

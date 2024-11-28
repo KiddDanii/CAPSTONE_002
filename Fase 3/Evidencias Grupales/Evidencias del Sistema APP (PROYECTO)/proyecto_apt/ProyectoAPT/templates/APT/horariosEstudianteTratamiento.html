@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+<!-- Incluir FullCalendar y SweetAlert2 -->
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="{% static 'css/agenda_cita.css' %}">
+{# Agregar esto cerca del inicio del contenido #}
+{% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+            <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+<div class="container">
+    <h2 class="titulo-principal">¿QUÉ SERVICIO NECESITA AGENDAR?</h2>
+    <p class="subtitulo">Elige el servicio que necesitas agendar</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <!-- En la sección de los tratamientos -->
+        <div class="servicios-grid">
+            {% for tratamiento in estudiante.obtenerTratamiento %}
+                <div class="servicio-card">
+                    <div class="icono">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <h3>{{ tratamiento.nombreTratamiento }}</h3>
+                    <p>Servicio dental profesional</p>
+                    <button type="button"
+                        class="btn-servicio"
+                        onclick="mostrarCalendario('{{ tratamiento.id }}', '{{ tratamiento.nombreTratamiento }}')"
+                    >Seleccionar</button>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Campos ocultos del formulario -->
+        <div class="row" id="hiddenValues">
+            <input type="hidden" name="tratamiento" id="id_tratamiento">
+            <input type="hidden" name="tipotratamiento" id="nombreTratamiento">
+            <input type="hidden" name="fecha_seleccionada" id="id_fecha_seleccionada">
+            <input type="hidden" name="paciente" id="id_paciente" value="{{ actualUser }}">
+            <input type="hidden" name="estudiante" id="id_estudiante" value="{{ estudiante.id }}">
+            <input type="hidden" name="inicio" id="id_inicio">
+        </div>
+    </form>
+
+    <!-- Calendario oculto inicialmente -->
+    <div id="calendario-container" style="display: none;">
+        <h3 id="tratamiento-seleccionado"></h3>
+        <div id="calendar"></div>
+    </div>
+
+    <!-- Modal para horarios -->
+    <div class="modal fade" id="horariosModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Horarios Disponibles</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="horarios-lista"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmarCita()">Agendar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+let calendar;
+
+function mostrarCalendario(tratamientoId, nombreTratamiento) {
+    document.getElementById('calendario-container').style.display = 'block';
+    document.getElementById('tratamiento-seleccionado').textContent = nombreTratamiento;
+    
+    document.getElementById('id_tratamiento').value = tratamientoId;
+    document.getElementById('nombreTratamiento').value = tratamientoId;
+    
+    if (calendar) {
+        calendar.destroy();
+    }
+    
+    fetch(`/obtener-horarios-disponibles/?tratamiento_id=${tratamientoId}&estudiante_id={{ estudiante.id }}`)
+        .then(response => response.json())
+        .then(data => {
+            inicializarCalendario(tratamientoId, data);
+        });
+}
+
+function inicializarCalendario(tratamientoId, diasDisponibles) {
+    console.log("Días disponibles recibidos:", diasDisponibles);
+    
+    var calendarEl = document.getElementById('calendar');
+    calendar = new FullCalendar.Calendar(calendarEl, {
+        locale: 'es',
+        initialView: 'dayGridMonth',
+        selectable: true,
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth'
+        },
+        dayCellDidMount: function(arg) {
+            const fecha = arg.date.toISOString().split('T')[0];
+            console.log("Verificando fecha:", fecha);
+            
+            const esDiaDisponible = diasDisponibles.some(d => {
+                const fechaDisponible = d.fecha_seleccionada;
+                console.log("Comparando con:", fechaDisponible);
+                return fechaDisponible === fecha;
+            });
+            
+            if (esDiaDisponible) {
+                console.log("Día disponible encontrado:", fecha);
+                arg.el.classList.add('dia-disponible');
+                // Intentar forzar el estilo directamente
+                arg.el.style.backgroundColor = '#e8f4ff';
+                arg.el.style.cursor = 'pointer';
+            }
+        },
+        dateClick: function(info) {
+            if (info.dayEl.classList.contains('dia-disponible')) {
+                mostrarHorariosDisponibles(tratamientoId, info.dateStr);
+            }
+        }
+    });
+    
+    calendar.render();
+}
+
+function mostrarHorariosDisponibles(tratamientoId, fecha) {
+    document.getElementById('id_fecha_seleccionada').value = fecha;
+    
+    fetch(`/obtener-horarios-disponibles/?tratamiento_id=${tratamientoId}&fecha_seleccionada=${fecha}&estudiante_id={{ estudiante.id }}`)
+        .then(response => response.json())
+        .then(data => {
+            var horariosHtml = '';
+            if (data.length > 0) {
+                data.forEach(horario => {
+                    // Solo mostrar el horario si está realmente disponible
+                    if (!horario.reservado) {
+                        horariosHtml += `
+                            <button type="button" class="btn btn-outline-primary m-1" 
+                                    onclick="seleccionarHorario('${horario.inicio}')">
+                                ${horario.inicio}
+                            </button>`;
+                    }
+                });
+                // Si no hay horarios disponibles después del filtrado
+                if (horariosHtml === '') {
+                    horariosHtml = '<p>No hay horarios disponibles para esta fecha</p>';
+                }
+            } else {
+                horariosHtml = '<p>No hay horarios disponibles para esta fecha</p>';
+            }
+            document.getElementById('horarios-lista').innerHTML = horariosHtml;
+            new bootstrap.Modal(document.getElementById('horariosModal')).show();
+        });
+}
+
+function seleccionarHorario(hora) {
+    document.getElementById('id_inicio').value = hora;
+    document.querySelectorAll('#horarios-lista button').forEach(btn => {
+        btn.classList.remove('btn-primary');
+        btn.classList.add('btn-outline-primary');
+        if (btn.textContent.trim() === hora) {
+            btn.classList.remove('btn-outline-primary');
+            btn.classList.add('btn-primary');
+        }
+    });
+}
+
+function confirmarCita() {
+    const form = document.querySelector('form');
+    const formData = new FormData(form);
+
+    if (!formData.get('tipotratamiento') || !formData.get('fecha_seleccionada') || !formData.get('inicio')) {
+        Swal.fire({
+            title: 'Error',
+            text: 'Por favor, selecciona todos los campos necesarios',
+            icon: 'error'
+        });
+        return;
+    }
+
+    form.submit();
+}
+</script>
+
+
+
+{% endblock %}

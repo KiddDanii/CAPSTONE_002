@@ -1,0 +1,151 @@
+/* Estilos básicos */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.sidebar {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  width: 260px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  font-size: 26px;
+  margin-top: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 20px 0;
+}
+
+
+.sidebar a:hover {
+  text-decoration: underline;
+  color: white !important;
+}
+
+.pacientesCss {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 260px; /* Ancho del sidebar */
+}
+
+.content {
+  padding: 20px;
+}
+
+.patient-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.patient-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.patient-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.patient-info p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.patient-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; /* Espacio entre botones */
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: white;
+  background-color: #007bff;
+}
+
+.button i {
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Estilos específicos para cada tipo de botón */
+.button-crear-ficha {
+  background-color: #007bff; /* Azul principal */
+}
+
+.button-crear-ficha:hover {
+  background-color: #ffffff; /* Azul más oscuro al pasar el mouse */
+}
+
+.button-crear-historial {
+  background-color: #007bff; /* Mismo azul que el botón crear ficha */
+}
+
+.button-crear-historial:hover {
+  background-color: #ffffff; /* Azul más oscuro al pasar el mouse */
+}
+
+.button-ver-ficha {
+  background-color: #007bff; /* Mismo azul que los otros botones */
+}
+
+.button-ver-ficha:hover {
+  background-color: #ffffff; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Mantén el efecto hover general si lo deseas */
+.button:hover {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+nav {
+  margin-left: 1000px; /* Mismo ancho que el sidebar */
+}
